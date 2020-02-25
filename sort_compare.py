@@ -18,11 +18,9 @@ def insertion_sort(a_list):
     end = time.time()
     return end-start
 
-a_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-insertion_sort(a_list)
-print(a_list)
-
-
+# a_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+# insertion_sort(a_list)
+# print(a_list)
 
 def shell_sort(a_list):
     start = time.time()
@@ -44,7 +42,6 @@ def gap_insertion_sort(a_list, start, gap):
             a_list[position] = a_list[position - gap]
             position = position - gap
         a_list[position] = current_value
-
 
 # a_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 # shell_sort(a_list)
