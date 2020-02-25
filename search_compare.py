@@ -18,10 +18,9 @@ def sequential_search(a_list, item):
     end = time.time()
     return found, end-start
 
-test_list = [1, 2, 32, 8, 17, 19, 42, 13, 0]
-print(sequential_search(test_list, 3))
-print(sequential_search(test_list, 13))
-
+# test_list = [1, 2, 32, 8, 17, 19, 42, 13, 0]
+# print(sequential_search(test_list, 3))
+# print(sequential_search(test_list, 13))
 
 
 def ordered_sequential_search(a_list, item):
@@ -41,9 +40,9 @@ def ordered_sequential_search(a_list, item):
     end1 = time.time()
     return found, end1-start1
 
-test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-print(ordered_sequential_search(test_list, 3))
-print(ordered_sequential_search(test_list, 13))
+# test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
+# print(ordered_sequential_search(test_list, 3))
+# print(ordered_sequential_search(test_list, 13))
 
 
 def binary_search_iterative(a_list, item):
@@ -64,14 +63,12 @@ def binary_search_iterative(a_list, item):
     end2 = time.time()
     return found, end2-start2
 
-test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-
-print(binary_search_iterative(test_list, 3))
-print(binary_search_iterative(test_list, 13))
-
+# test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
+# print(binary_search_iterative(test_list, 3))
+# print(binary_search_iterative(test_list, 13))
 
 def binary_search_recursive(a_list, item):
-
+    
     if len(a_list) == 0:
         return False
     else:
@@ -85,16 +82,15 @@ def binary_search_recursive(a_list, item):
             return binary_search_recursive(a_list[midpoint + 1:], item)
 
 def test_wrapper(a_list, item):
-    """ Calls the function binary_search_recursive ....with the time"""
+    """Calls the function binary_search_recursive and computes the time of the aforemetioned function."""
     start3 = time.time()
     result = binary_search_recursive(a_list, item)
     end3 = time.time()
     return result, end3-start3
 
-test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-print(test_wrapper(test_list, 3))
-print(test_wrapper(test_list, 13))
-
+# test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
+# print(test_wrapper(test_list, 3))
+# print(test_wrapper(test_list, 13))
 
 def main():
     """This function prints how long it takes for the sequential_search,
